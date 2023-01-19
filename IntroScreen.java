@@ -1,10 +1,13 @@
 import java.awt.Color;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.event.ActionEvent;
 
-/**
- * Main
- */
+//IntroScreen class responsible for displaying the introduction screen, disposed when clicked on button
 public class IntroScreen extends Frame implements ActionListener {
     JFrame jf;
 
@@ -38,8 +41,8 @@ public class IntroScreen extends Frame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
+        // dispose this screen
         jf.dispose();
-        // mypanel.add(new JLabel("gameIcon.png"));
         new Instructions();
     }
 

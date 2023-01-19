@@ -3,9 +3,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import java.awt.Color;
-import java.awt.event.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Instructions extends Frame implements ActionListener {
     JFrame jf = new JFrame("Maze");
@@ -16,7 +16,7 @@ public class Instructions extends Frame implements ActionListener {
 
         mypanel = new JPanel();
         mypanel.setVisible(true);
-        ImageIcon i = new ImageIcon("Screenshot (63).png");
+        ImageIcon i = new ImageIcon("instructions.png");
         mypanel.setBackground(Color.BLACK);
 
         mypanel.add(new JLabel(i));
@@ -28,9 +28,10 @@ public class Instructions extends Frame implements ActionListener {
 
     }
 
+    // generates new instance for main class
     public void actionPerformed(ActionEvent ae) {
         jf.dispose();
-        new Main();
+        new Main(1);
 
     }
 
